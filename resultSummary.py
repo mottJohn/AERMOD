@@ -267,7 +267,8 @@ df_list.append(summary)
 
 summary_T = summary.T
 summary_T.columns = summary_T.iloc[0]
-summary_T.drop('Index', axis = 0)
+summary_T = summary_T.drop('Index', axis = 0)
+summary_T = summary_T.reset_index()
 
 df_list.append(summary_T)
 
