@@ -18,3 +18,7 @@ The project aims at developing scripts that can speed up the data preparation pr
 # Quickier Way to Do Box
 ST_subdivide
 ST_extent
+
+# Quickier Way to Do Scaling
+Get the vertex of polygons. Find the closer points to a particilar point. Scale the rectangles using the closer point as anchor.
+ST_dumppoints, ST_scale
