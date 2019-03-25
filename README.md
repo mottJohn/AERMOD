@@ -14,6 +14,7 @@ The project aims at developing scripts that can speed up the data preparation pr
     * Beware of the units. Sometimes, the model update will change the input units.
 4. parsePOS.py is used to parse the .POS file from AERMOD output.
     * Put all POS files in one folder. The program will extract all for you.
+    * The program output excels in a certain format. The reason to use this strange format is for compatability of another Excel Macro which intends to do the same thing.
 5. resultSummary.py is used to prepare summary tables for presentation in report
     * Put each kind of polluntants in separate folders, e.g. TSPhr, FSPda, etc. Don't put them all together.
     * The summary parameters are based on Hong Kong Air Quality Objectives
