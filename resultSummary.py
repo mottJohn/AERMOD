@@ -10,7 +10,8 @@ from __future__ import division
 
 path_cmaq = r'C:\Users\CHA82870\Mott MacDonald\AERMOD Modelling Services - Do\06 Working\PATH\cmaq'
 path_aermod = r'C:\Users\CHA82870\Mott MacDonald\AERMOD Modelling Services - Do\06 Working\Model\AERMOD\Model results\Tier 2 mit\TSPhr'
-excel_name = 'mTSPhr (Tier 2).xlsx'
+excel_name = r'P:\Hong Kong\ENL\ENL Personal Folders\Nikita\Hirams HW\ASR results\mFSPan.xlsx'
+ASR_list = r'C:\Users\CHA82870\Mott MacDonald\AERMOD Modelling Services - Do\06 Working\Program\REAL\ASR_list.xlsx'
 
 grids = ['48_38', '49_38', '49_39', '49_40', '50_40', '50_41']
 
@@ -263,6 +264,10 @@ elif pollutants == 5:
     lst_rows = ['Annual average', 'Annual project contribution','Annual background contribution']
     summary = summary[summary['Index'].isin(lst_rows)]
 
+lst = pd.read_excel(ASR_list)
+lst = lst['ASRS'][lst['ASRS'].isin(summary.columns.tolist())].tolist() #filter ASRs that is in the sumamry table columns
+lst.insert(0, "Index")
+summary = summary[lst]
 df_list.append(summary)
 
 summary_T = summary.T
