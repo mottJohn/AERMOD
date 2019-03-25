@@ -11,7 +11,11 @@ The project aims at developing scripts that can speed up the data preparation pr
     * what you can leverage is the format generated through the code which has been proved working
 3. mcipPreparation.py is used to prepare meteorological data for model input
     * This is Hong Kong specific. The requirements are set by EPD HK
-4. resultSummary.py is used to prepare summary tables for presentation in report
+    * Beware of the units. Sometimes, the model update will change the input units.
+4. parsePOS.py is used to parse the .POS file from AERMOD output.
+    * Put all POS files in one folder. The program will extract all for you.
+5. resultSummary.py is used to prepare summary tables for presentation in report
+    * Put each kind of polluntants in separate folders, e.g. TSPhr, FSPda, etc. Don't put them all together.
     * The summary parameters are based on Hong Kong Air Quality Objectives
     * It is therefore also Hong Kong specific
     
