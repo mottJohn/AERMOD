@@ -14,3 +14,11 @@ The project aims at developing scripts that can speed up the data preparation pr
 4. resultSummary.py is used to prepare summary tables for presentation in report
     * The summary parameters are based on Hong Kong Air Quality Objectives
     * It is therefore also Hong Kong specific
+    
+# Quickier Way to Do Box
+ST_subdivide
+ST_extent
+
+# Quickier Way to Do Scaling
+Get the vertex of polygons. Find the closer points to a particilar point. Scale the rectangles using the closer point as anchor.
+ST_dumppoints, ST_scale
