@@ -134,7 +134,7 @@ def matrix(cmaq, aermod, factor_daily, factor_annual, factor_aermod):
     for cols in aermod.columns[1:]: #skip index
         aermodPath[cols] = aermod[cols]*factor_aermod + data['RSP']*factor_daily
     
-    #for annual average
+    #for annual average (path data included)
 
     aermod_an = pd.DataFrame()
     aermod_an['Time'] = aermod[aermod.columns[0]]
