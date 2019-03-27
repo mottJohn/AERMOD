@@ -97,7 +97,7 @@ def getFiles (path, type):
 files_cmaq = getFiles(path_cmaq, 'txt')
 files_aermod = getFiles(path_aermod, 'xlsx')
 
-def matrix(cmaq, aermod, factor_daily, factor_aermod):
+def matrix(cmaq, aermod, factor_daily, factor_annual, factor_aermod):
     data = pd.read_csv(cmaq, sep='\s+')
     data = data.drop([0,1], axis = 0)
     data = data.apply(pd.to_numeric)
@@ -157,7 +157,7 @@ for file_aermod in files_aermod: #loop through each aermod files
         if file_aermod.find(grid) != -1: #check if grid match the name of aermod
             for file_cmaq in files_cmaq: # loop through the cmaq files
                 if file_cmaq.find(grid) != -1: #find the one that match with aermod
-                    PATH_temp, AERMOD_temp, AERMODPATH_temp, AERMODAN_temp = matrix(file_cmaq, file_aermod, factor_daily, factor_aermod)
+                    PATH_temp, AERMOD_temp, AERMODPATH_temp, AERMODAN_temp = matrix(file_cmaq, file_aermod, factor_daily, factor_annual, factor_aermod)
                     if len(PATH) == 0:
                         PATH = PATH_temp
                         AERMOD = AERMOD_temp
