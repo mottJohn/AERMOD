@@ -20,6 +20,7 @@ pollutants = 3 #RSP (PM10) annual
 ##############################
 
 import pandas as pd
+import numpy as np
 import csv
 import numpy as np
 
